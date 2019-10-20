@@ -12,10 +12,12 @@ def getNum(text):
     return num
 
 def checkIfPrime(number):
-    if type(number) != int: raise TypeError('number must be positive intiger')
-    if number <= 0: raise ValueError('number must be positive intiger') 
+    if type(number) != int: 
+        raise TypeError('number must be positive intiger')
+    if number <= 0: 
+        raise ValueError('number must be positive intiger') 
     if number < 4:
-        return not number == 1
+        return number != 1
     if number % 6 not in [1,5]: return False
     divisor = 5
     while divisor <= math.sqrt(number):
