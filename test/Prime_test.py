@@ -1,8 +1,9 @@
-import unittest
+import os
 import sys
+import unittest
 
-sys.path.append('..')
-from PrimeNumbers.source import Prime
+sys.path.insert(0,os.path.split(os.path.dirname(os.path.abspath(__file__)))[0])
+from source import Prime
 
 class TestCheckIfPrime(unittest.TestCase):
 
